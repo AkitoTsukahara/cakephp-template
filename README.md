@@ -20,7 +20,7 @@ $ docker-compose exec -it cake_php bash
 $ composer create-project --prefer-dist cakephp/app:^3.8 .
 ```
 
-5.`http://localhost/`でLaravelのウェルカムページが表示されたら成功です!
+5.`http://localhost/`でCakePHPのウェルカムページが表示されたら成功です!
 
 止めたい時は以下のコマンドを入力してください。
 ```
