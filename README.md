@@ -12,12 +12,12 @@ $ docker-compose up -d
   
 3.以下のコマンドでphpコンテナに入ります。
 ```
-$ docker-compose exec -it cake_php bash
+$ docker exec -it cake_php bash
 ```
 
 4.CakePHPのプロジェクトを立ち上げましょう！
 ```
-$ composer create-project --prefer-dist cakephp/app:^3.8 .
+$ composer create-project --prefer-dist cakephp/app:^4.0 .
 ```
 
 5.`http://localhost/`でCakePHPのウェルカムページが表示されたら成功です!
