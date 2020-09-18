@@ -12,7 +12,7 @@ $ docker-compose up -d
   
 3.以下のコマンドでphpコンテナに入ります。
 ```
-$ docker exec -it cake_php bash
+$ docker-compose exec -it php bash
 ```
 
 4.CakePHPのプロジェクトを立ち上げましょう！
