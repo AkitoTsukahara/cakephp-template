@@ -12,7 +12,7 @@ $ docker-compose up -d
   
 3.以下のコマンドでphpコンテナに入ります。
 ```
-$ docker-compose exec -it php bash
+$ docker-compose exec php bash
 ```
 
 4.CakePHPのプロジェクトを立ち上げましょう！
@@ -20,7 +20,19 @@ $ docker-compose exec -it php bash
 $ composer create-project --prefer-dist cakephp/app:^4.0 .
 ```
 
-5.`http://localhost/`でCakePHPのウェルカムページが表示されたら成功です!
+5.`http://localhost/`でCakePHPのウェルカムページを確認してください
+
+6.データベースと接続させるために、`app_local.php`のDatasourcesを編集してください
+データベース名やユーザ名は`docker-compose.yml`を確認してください
+
+hostがlocalostで接続されない場合は、以下のURLを参考にしてください
+https://qiita.com/nagimaruxxx/items/7880e4077d24255aac5d
+
+DBコンテナへの接続
+```
+$ docker-compose exec db bash
+```
+
 
 止めたい時は以下のコマンドを入力してください。
 ```
