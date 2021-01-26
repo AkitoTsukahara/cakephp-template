@@ -17,6 +17,7 @@ $ docker-compose exec php bash
 
 4.CakePHPのプロジェクトを立ち上げましょう！
 ```
+$ rm .gitkeep
 $ composer create-project --prefer-dist cakephp/app:^4.0 .
 ```
 
@@ -32,16 +33,11 @@ DBコンテナへの接続
 ```
 $ docker-compose exec db bash
 ```
-
-
 止めたい時は以下のコマンドを入力してください。
 ```
 $  docker stop $(docker ps -q) 
 ```
----
 
-もし、`composer-setup.php`で失敗したら以下のURLページを参照し、
-`Dockerfile`中の`composer-setup.php`のハッシュ値を差し替えてください。
-https://getcomposer.org/download/
-
+テンプレートのなのでseverディレクトリをgit監視対象から外しています。
+実際に開発する際は.gitignoreからserverを消してください。
 ---
